@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Car List</h1>
+  <p><a href="{% url 'car_create' %}">Add new car</a></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for car in cars %}
+        <tr>
+          <td>{{ car.make }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.year }}</td>
+          <td>
+            <a href="{% url 'car_detail' pk=car.pk %}">View</a>
+            <a href="{% url 'car_update' pk=car.pk %}">Edit</a>
+            <a href="{% url 'car_delete' pk=car.pk %}">Delete</a>
+          </td>
+        </tr>
+      {%

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Car List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for car in cars %}
+        <tr>
+          <td>{{ car.manufacturer }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.year }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No cars yet.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
