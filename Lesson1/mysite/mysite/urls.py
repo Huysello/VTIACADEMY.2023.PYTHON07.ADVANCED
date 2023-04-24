@@ -18,6 +18,9 @@ from django.urls import re_path
 from django.conf.urls import include
 
 urlpatterns = [
+    re_path(r'^login/', include('login.urls')),
     re_path(r'^polls/', include('polls.urls')),
     re_path(r'^admin/', admin.site.urls),
+    re_path(r'^file-upload/', include('file_uploader.urls')),
+    re_path(r'^pagination/', include('pagination.urls')),
 ]

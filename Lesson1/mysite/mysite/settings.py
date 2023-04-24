@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'login',
+    'polls.apps.PollsConfig',
+    'pagination',
+    'file_uploader',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,3 +125,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#SESSION_ENGINE = [
+#    'django.contrib.sessions.backends.cached_db',
+#    'django.contrib.sessions.backends.signed_cookies'
+#]
