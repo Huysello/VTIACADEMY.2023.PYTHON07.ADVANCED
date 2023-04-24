@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block heading %}Person{% endblock %}</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'person_list' %}">List Person</a></li>
+        </ul>
+    </nav>
+    <section>
+        {% block content %}
+            <p>Default content.</p>
+        {% endblock %}
+    </section>
+</body>
+</html>
